@@ -9,16 +9,8 @@ Welcome to InfrasCloudy Flask-Base's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-   - setup/index
-   - commands/index
-        - Configuration: config.md
-        - Initialization: init.md
-        - Assets and Decorators: assets.md
-        - Models: models.md
-        - Routing (account routes): account.md
-        - Templating: templates.md
-        - Deployment: deploy.md
+    - setup/index
+    - commands/index
 
 Source Code
 -----------
