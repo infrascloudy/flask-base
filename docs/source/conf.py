@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# InfrasCloudy Flask-Base documentation build configuration file, created by
-# sphinx-quickstart on Wed Jun  7 05:34:30 2017.
+# InfrasCloudy Flask Base documentation build configuration file, created by
+# sphinx-quickstart on Wed Jun  7 06:01:41 2017.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -31,12 +31,7 @@ sys.path.insert(0, os.path.abspath('.'))
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc',
-              'sphinx.ext.intersphinx',
-              'sphinx.ext.todo',
-              'sphinx.ext.coverage',
-              'sphinx.ext.viewcode',
-              'sphinx.ext.napoleon']
+extensions = ['sphinx.ext.autodoc']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -51,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'InfrasCloudy Flask-Base'
+project = u'InfrasCloudy Flask Base'
 copyright = u'2017, Allan Swanepoel'
 author = u'Allan Swanepoel'
 
@@ -74,7 +69,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -107,7 +102,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'InfrasCloudyFlask-Basedoc'
+htmlhelp_basename = 'InfrasCloudyFlaskBasedoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -134,7 +129,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'InfrasCloudyFlask-Base.tex', u'InfrasCloudy Flask-Base Documentation',
+    (master_doc, 'InfrasCloudyFlaskBase.tex', u'InfrasCloudy Flask Base Documentation',
      u'Allan Swanepoel', 'manual'),
 ]
 
@@ -144,7 +139,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'infrascloudyflask-base', u'InfrasCloudy Flask-Base Documentation',
+    (master_doc, 'infrascloudyflaskbase', u'InfrasCloudy Flask Base Documentation',
      [author], 1)
 ]
 
@@ -155,8 +150,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'InfrasCloudyFlask-Base', u'InfrasCloudy Flask-Base Documentation',
-     author, 'InfrasCloudyFlask-Base', 'One line description of project.',
+    (master_doc, 'InfrasCloudyFlaskBase', u'InfrasCloudy Flask Base Documentation',
+     author, 'InfrasCloudyFlaskBase', 'One line description of project.',
      'Miscellaneous'),
 ]
 
