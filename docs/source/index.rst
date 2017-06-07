@@ -9,8 +9,9 @@ Welcome to InfrasCloudy Flask-Base's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-    - setup/index
-    - commands/index
+
+   setup/index
+   commands/index
 
 Source Code
 -----------
