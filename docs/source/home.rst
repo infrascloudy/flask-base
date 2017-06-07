@@ -1,4 +1,7 @@
-.. home:
+.. _home:
+
+Home
+====
 
 Source Code
 -----------
