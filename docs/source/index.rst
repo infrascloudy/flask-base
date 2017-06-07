@@ -10,8 +10,9 @@ Welcome to InfrasCloudy Flask-Base's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   setup/index
-   commands/index
+   index
+   setup
+   commands
 
 Source Code
 -----------
