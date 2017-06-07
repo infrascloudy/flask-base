@@ -13,3 +13,10 @@ Welcome to InfrasCloudy Flask-Base's documentation!
    home
    setup
    commands
+   config
+   init
+   assets
+   models
+   account
+   templates
+   deploy
