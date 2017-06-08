@@ -37,7 +37,6 @@ Flask-Login
     login_manager.session_protection = 'strong'
     login_manager.login_view = 'account.login'
 
-
 Flask-login provides us with a bunch of easy ways to do secure and
 simple login techniques. LoginManager() is the main class that
 will handle all of this. Session protection makes sure the
