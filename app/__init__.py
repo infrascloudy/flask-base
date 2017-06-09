@@ -42,7 +42,7 @@ def create_app(config_name):
     RQ(app)
 
     # Register Jinja template functions
-    from .utils import register_template_utils
+    from app.utils import register_template_utils
     register_template_utils(app)
 
     # Set up asset pipeline
