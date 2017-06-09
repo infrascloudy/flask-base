@@ -1,2 +1,2 @@
-from .user import *
-from .misc import *
+from app.models.user import *
+from app.models.misc import *
