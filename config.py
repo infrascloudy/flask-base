@@ -1,5 +1,6 @@
 import os
 import sys
+
 from raygun4py.middleware import flask as flask_raygun
 
 PYTHON_VERSION = sys.version_info[0]
@@ -37,7 +38,8 @@ class Config:
 
     MAIL_USER = MAIL_NAME + '<' + MAIL_ADDRESS + '>'
     EMAIL_SUBJECT_PREFIX = '[{}]'.format(APP_NAME)
-    EMAIL_SENDER = '{app_name} Admin <{email}>'.format(app_name=APP_NAME, email=MAIL_USER)
+    EMAIL_SENDER = '{app_name} Admin <{email}>'.format(
+        app_name=APP_NAME, email=MAIL_USER)
 
     REDIS_URL = os.getenv('REDISTOGO_URL') or 'http://localhost:6379'
 
@@ -63,13 +65,17 @@ class Config:
 class DevelopmentConfig(Config):
     DEBUG = True
     ASSETS_DEBUG = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
+    SQLALCHEMY_DATABASE_URI = os.environ.get(
+        'DEV_DATABASE_URL') or 'sqlite:///' + os.path.join(
+            basedir, 'data-dev.sqlite')
     print('THIS APP IS IN DEBUG MODE. YOU SHOULD NOT SEE THIS IN PRODUCTION.')
 
 
 class TestingConfig(Config):
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'data-test.sqlite')
+    SQLALCHEMY_DATABASE_URI = os.environ.get(
+        'TEST_DATABASE_URL') or 'sqlite:///' + os.path.join(
+            basedir, 'data-test.sqlite')
     WTF_CSRF_ENABLED = False
 
 
@@ -103,6 +109,7 @@ class UnixConfig(ProductionConfig):
         syslog_handler = SysLogHandler()
         syslog_handler.setLevel(logging.WARNING)
         app.logger.addHandler(syslog_handler)
+
 
 config = {
     'development': DevelopmentConfig,

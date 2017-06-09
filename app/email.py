@@ -1,6 +1,7 @@
 from config import Config
-from flask import render_template
+
 import requests
+from flask import render_template
 
 
 def send_email(to_list, subject, template, **kwargs):
@@ -11,10 +12,13 @@ def send_email(to_list, subject, template, **kwargs):
         raise BaseException('Please configure MAIL_API and MAIL_DOMAIN')
     request_url = 'https://api.mailgun.net/v3/{0}/messages'.format(sandbox)
     for to in to_list:
-        requests.post(request_url, auth=('api', key), data={
-            'from': Config.MAIL_NAME + '<' + Config.MAIL_ADDRESS + '>',
-            'to': to,
-            'subject': subject,
-            'text': render_template(template + '.txt', **kwargs),
-            'html': render_template(template + '.html', **kwargs)
-        })
+        requests.post(
+            request_url,
+            auth=('api', key),
+            data={
+                'from': Config.MAIL_NAME + '<' + Config.MAIL_ADDRESS + '>',
+                'to': to,
+                'subject': subject,
+                'text': render_template(template + '.txt', **kwargs),
+                'html': render_template(template + '.html', **kwargs)
+            })

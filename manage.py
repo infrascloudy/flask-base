@@ -11,7 +11,6 @@ from rq import Connection, Queue, Worker
 from app import create_app, db
 from app.models import Role, User
 
-
 app = create_app(os.getenv('FLASK_CONFIG'))
 manager = Manager(app)
 migrate = Migrate(app, db)
@@ -40,7 +39,13 @@ def recreate_db():
     db.session.commit()
 
 
-@manager.option('-n', '--number-users', default=10, type=int, help='Number of each model type to create', dest='number_users')
+@manager.option(
+    '-n',
+    '--number-users',
+    default=10,
+    type=int,
+    help='Number of each model type to create',
+    dest='number_users')
 def add_fake_data(number_users):
     """
     Adds fake data to the database.

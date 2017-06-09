@@ -25,15 +25,14 @@ login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'account.login'
 
+
 def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    # not using sqlalchemy event system, hence disabling it
 
     config[config_name].init_app(app)
 
-    # Set up extensions
     mail.init_app(app)
     db.init_app(app)
     login_manager.init_app(app)
@@ -41,11 +40,9 @@ def create_app(config_name):
     compress.init_app(app)
     RQ(app)
 
-    # Register Jinja template functions
     from app.utils import register_template_utils
     register_template_utils(app)
 
-    # Set up asset pipeline
     assets_env = Environment(app)
     dirs = ['assets/styles', 'assets/scripts']
     for path in dirs:
@@ -57,12 +54,10 @@ def create_app(config_name):
     assets_env.register('vendor_css', vendor_css)
     assets_env.register('vendor_js', vendor_js)
 
-    # Configure SSL if platform supports it
     if not app.debug and not app.testing and not app.config['SSL_DISABLE']:
-        from flask.ext.sslify import SSLify
+        from flask_sslify import SSLify
         SSLify(app)
 
-    # Create app blueprints
     from app.main.views import main_blueprint
     app.register_blueprint(main_blueprint)
 
@@ -73,4 +68,3 @@ def create_app(config_name):
     app.register_blueprint(admin_blueprint, url_prefix='/admin')
 
     return app
-
