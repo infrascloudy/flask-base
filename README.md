@@ -1,5 +1,8 @@
-[![Stories in Ready](https://badge.waffle.io/infrascloudy/flask-base.png?label=ready&title=Ready)](https://waffle.io/infrascloudy/flask-base?utm_source=badge)
 # Flask-Base
+
+[![Stories in Ready](https://badge.waffle.io/infrascloudy/flask-base.png?label=ready&title=Ready)](https://waffle.io/infrascloudy/flask-base?utm_source=badge)
+[![Documentation Status](https://readthedocs.org/projects/flask-base/badge/?version=latest)](http://flask-base.readthedocs.io/en/latest/?badge=latest)
+
 
 A Flask application template with the boilerplate code already done for you.
 
