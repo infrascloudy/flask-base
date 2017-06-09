@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/infrascloudy/flask-base.png?label=ready&title=Ready)](https://waffle.io/infrascloudy/flask-base?utm_source=badge)
 # Flask-Base
 
 A Flask application template with the boilerplate code already done for you.
